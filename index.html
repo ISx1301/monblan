@@ -3,11 +3,119 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A clean Vanilla JavaScript project powered by Vite and Tailwind CSS."/>
+    <meta
+      name="description"
+      content="A clean Vanilla JavaScript project powered by Vite and Tailwind CSS."
+    />
     <title>Monblan</title>
   </head>
   <body>
-    
-    <script type="module" src="/src/main.js"></script>
+    <img
+      class="top-0 left-0 z-0 absolute pointer-events-none select-none"
+      src="/src/assets/icons/bg-wave-left.svg"
+      alt=""
+    />
+
+    <header class="z-10 relative bg-white/75 shadow-lg">
+      <div class="container">
+        <div
+          class="pt-header-top pb-header-bottom flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-header-gap"
+        >
+          <img class="shrink-0" src="/src/assets/icons/logo.svg" alt="Monblan logo" />
+
+          <div class="flex w-full flex-col items-center justify-center lg:w-auto lg:items-start">
+            <div class="flex flex-col items-center gap-2 mb-3.5 lg:flex-row lg:gap-4">
+              <h1 class="font-heading font-medium text-heading">monblanproject</h1>
+              <div class="py-header-top px-3 border border-brand rounded-sm">
+                <p class="font-normal text-brand text-sm">Start on 17-02-2016</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-3.5 lg:justify-start">
+              <p class="font-bold text-sm">
+                870
+                <span class="font-normal">posts</span>
+              </p>
+              <p class="font-bold text-sm">
+                11,787
+                <span class="font-normal">followers</span>
+              </p>
+              <p class="font-bold text-sm">
+                112
+                <span class="font-normal">following</span>
+              </p>
+            </div>
+
+            <div class="flex w-full flex-col items-center gap-3 lg:w-auto lg:flex-row">
+              <p class="font-normal text-base text-muted">Date</p>
+
+              <div
+                class="flex w-full flex-col items-stretch gap-3 lg:w-auto lg:flex-row lg:items-center lg:gap-5"
+              >
+                <div
+                  class="flex w-full bg-white border border-border-soft rounded-sm h-8 overflow-hidden lg:w-auto"
+                  data-datepicker
+                >
+                  <input
+                    class="min-w-0 flex-1 px-3 outline-none font-normal text-filter text-muted placeholder:text-muted lg:w-28 lg:flex-none"
+                    type="text"
+                    placeholder="from"
+                    aria-label="Start date"
+                    data-datepicker-input
+                  />
+                  <button
+                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l text-muted cursor-pointer"
+                    type="button"
+                    aria-label="Clear start date"
+                    data-datepicker-clear
+                  >
+                    <img class="size-6" src="/src/assets/icons/bx-bx-plus.svg" alt="" />
+                  </button>
+                  <button
+                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l cursor-pointer"
+                    type="button"
+                    aria-label="Open start date calendar"
+                    data-datepicker-toggle
+                  >
+                    <img class="size-6" src="/src/assets/icons/calendar.svg" alt="" />
+                  </button>
+                </div>
+
+                <div
+                  class="flex w-full bg-white border border-border-soft rounded-sm h-8 overflow-hidden lg:w-auto"
+                  data-datepicker
+                >
+                  <input
+                    class="min-w-0 flex-1 px-3 outline-none font-normal text-filter text-muted placeholder:text-muted lg:w-28 lg:flex-none"
+                    type="text"
+                    placeholder="to"
+                    aria-label="End date"
+                    data-datepicker-input
+                  />
+                  <button
+                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l text-muted cursor-pointer"
+                    type="button"
+                    aria-label="Clear end date"
+                    data-datepicker-clear
+                  >
+                    <img class="size-6" src="/src/assets/icons/bx-bx-plus.svg" alt="" />
+                  </button>
+                  <button
+                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l cursor-pointer"
+                    type="button"
+                    aria-label="Open end date calendar"
+                    data-datepicker-toggle
+                  >
+                    <img class="size-6" src="/src/assets/icons/calendar.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
