@@ -7,6 +7,7 @@
       name="description"
       content="A clean Vanilla JavaScript project powered by Vite and Tailwind CSS."
     />
+    <link rel="stylesheet" href="/src/styles/style.css" />
     <title>Monblan</title>
   </head>
   <body>
@@ -16,22 +17,28 @@
       alt=""
     />
 
+    <img
+      class="right-0 bottom-10 z-0 fixed pointer-events-none select-none"
+      src="/src/assets/icons/bg-wave-right.svg"
+      alt=""
+    />
+
     <header class="z-10 relative bg-white/75 shadow-lg">
       <div class="container">
         <div
-          class="pt-header-top pb-header-bottom flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-header-gap"
+          class="pt-header-top pb-header-bottom flex lg:flex-row flex-col justify-center items-center gap-6 lg:gap-header-gap"
         >
           <img class="shrink-0" src="/src/assets/icons/logo.svg" alt="Monblan logo" />
 
-          <div class="flex w-full flex-col items-center justify-center lg:w-auto lg:items-start">
-            <div class="flex flex-col items-center gap-2 mb-3.5 lg:flex-row lg:gap-4">
+          <div class="flex flex-col justify-center items-center lg:items-start w-full lg:w-auto">
+            <div class="flex lg:flex-row flex-col items-center gap-2 lg:gap-4 mb-3.5">
               <h1 class="font-heading font-medium text-heading">monblanproject</h1>
               <div class="py-header-top px-3 border border-brand rounded-sm">
                 <p class="font-normal text-brand text-sm">Start on 17-02-2016</p>
               </div>
             </div>
 
-            <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-3.5 lg:justify-start">
+            <div class="flex flex-wrap justify-center lg:justify-start gap-x-5 gap-y-2 mb-3.5">
               <p class="font-bold text-sm">
                 870
                 <span class="font-normal">posts</span>
@@ -46,25 +53,25 @@
               </p>
             </div>
 
-            <div class="flex w-full flex-col items-center gap-3 lg:w-auto lg:flex-row">
-              <p class="font-normal text-base text-muted">Date</p>
+            <div class="flex lg:flex-row flex-col items-center gap-3 w-full lg:w-auto">
+              <p class="font-normal text-muted text-base">Date</p>
 
               <div
-                class="flex w-full flex-col items-stretch gap-3 lg:w-auto lg:flex-row lg:items-center lg:gap-5"
+                class="flex lg:flex-row flex-col items-stretch lg:items-center gap-3 lg:gap-5 w-full lg:w-auto"
               >
                 <div
-                  class="flex w-full bg-white border border-border-soft rounded-sm h-8 overflow-hidden lg:w-auto"
+                  class="flex bg-white border border-border-soft rounded-sm w-full lg:w-auto h-8 overflow-hidden"
                   data-datepicker
                 >
                   <input
-                    class="min-w-0 flex-1 px-3 outline-none font-normal text-filter text-muted placeholder:text-muted lg:w-28 lg:flex-none"
+                    class="flex-1 lg:flex-none px-3 outline-none lg:w-28 min-w-0 font-normal text-filter text-muted placeholder:text-muted"
                     type="text"
                     placeholder="from"
                     aria-label="Start date"
                     data-datepicker-input
                   />
                   <button
-                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l text-muted cursor-pointer"
+                    class="flex justify-center items-center bg-control-bg border-border-soft border-l w-8 text-muted cursor-pointer"
                     type="button"
                     aria-label="Clear start date"
                     data-datepicker-clear
@@ -72,7 +79,7 @@
                     <img class="size-6" src="/src/assets/icons/bx-bx-plus.svg" alt="" />
                   </button>
                   <button
-                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l cursor-pointer"
+                    class="flex justify-center items-center bg-control-bg border-border-soft border-l w-8 cursor-pointer"
                     type="button"
                     aria-label="Open start date calendar"
                     data-datepicker-toggle
@@ -82,18 +89,18 @@
                 </div>
 
                 <div
-                  class="flex w-full bg-white border border-border-soft rounded-sm h-8 overflow-hidden lg:w-auto"
+                  class="flex bg-white border border-border-soft rounded-sm w-full lg:w-auto h-8 overflow-hidden"
                   data-datepicker
                 >
                   <input
-                    class="min-w-0 flex-1 px-3 outline-none font-normal text-filter text-muted placeholder:text-muted lg:w-28 lg:flex-none"
+                    class="flex-1 lg:flex-none px-3 outline-none lg:w-28 min-w-0 font-normal text-filter text-muted placeholder:text-muted"
                     type="text"
                     placeholder="to"
                     aria-label="End date"
                     data-datepicker-input
                   />
                   <button
-                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l text-muted cursor-pointer"
+                    class="flex justify-center items-center bg-control-bg border-border-soft border-l w-8 text-muted cursor-pointer"
                     type="button"
                     aria-label="Clear end date"
                     data-datepicker-clear
@@ -101,7 +108,7 @@
                     <img class="size-6" src="/src/assets/icons/bx-bx-plus.svg" alt="" />
                   </button>
                   <button
-                    class="flex items-center justify-center w-8 bg-control-bg border-border-soft border-l cursor-pointer"
+                    class="flex justify-center items-center bg-control-bg border-border-soft border-l w-8 cursor-pointer"
                     type="button"
                     aria-label="Open end date calendar"
                     data-datepicker-toggle
@@ -115,6 +122,48 @@
         </div>
       </div>
     </header>
+
+    <main class="bg-page-bg">
+      <div class="z-10 relative container">
+        <div class="flex justify-end gap-5 py-5" data-layout-switcher>
+          <button
+            class="flex justify-center items-center cursor-pointer"
+            type="button"
+            aria-label="Rows layout"
+            aria-pressed="true"
+            data-layout-option="rows"
+          >
+            <img class="size-6" src="/src/assets/icons/rows-active.svg" alt="" data-layout-icon />
+          </button>
+          <button
+            class="flex justify-center items-center cursor-pointer"
+            type="button"
+            aria-label="Columns layout"
+            aria-pressed="false"
+            data-layout-option="cols"
+          >
+            <img
+              class="size-6"
+              src="/src/assets/icons/cols-not-active.svg"
+              alt=""
+              data-layout-icon
+            />
+          </button>
+        </div>
+
+        <div data-layout-content data-cards-list></div>
+      </div>
+
+      <div class="flex justify-center py-6 container">
+        <button
+          class="px-6 py-2 border border-load-more rounded-3xl text-load-more cursor-pointer"
+          type="button"
+          data-load-more
+        >
+          LOAD MORE
+        </button>
+      </div>
+    </main>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>
