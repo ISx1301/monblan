@@ -1,5 +1,7 @@
 # Monblan Project
 
+Live demo: https://monblan-one.vercel.app/
+
 Responsive Vanilla JavaScript profile/gallery page built with Vite and Tailwind CSS.
 
 ## Tech Stack
